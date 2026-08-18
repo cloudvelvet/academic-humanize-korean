@@ -1,7 +1,7 @@
 interface:
   display_name: "Academic Humanize Korean"
-  short_description: "심리학 통계·척도·인과 해석을 보존하는 한국어 학술 윤문"
-  default_prompt: "Use $academic-humanize-korean to polish this Korean psychology manuscript while preserving its design, statistics, scales, citations, and level of certainty."
+  short_description: "심리학 연구 충실성과 AI 문체 신호를 점검하는 한국어 학술 윤문"
+  default_prompt: "Use $academic-humanize-korean to polish this Korean psychology manuscript and review AI-writing risk signals without claiming authorship."
 
 policy:
   allow_implicit_invocation: true
