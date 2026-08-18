@@ -1,0 +1,59 @@
+# Academic Humanize Korean
+
+한국어 학술 논문·학위논문·학술 초록을 명료하게 윤문하는 Codex 스킬입니다. 문장을 자연스럽게 다듬되 주장, 인용, 수치, 전문용어, 인과관계와 불확실성의 강도를 보존합니다.
+
+## 주요 원칙
+
+- 인용, DOI, URL, 수치, 단위, 수식과 표·그림 참조 보존
+- 가능성, 추정, 한계 등 연구의 확신 수준 보존
+- 상관관계를 인과관계로 바꾸거나 새 근거·출처를 만드는 편집 금지
+- 초록, 서론, 선행연구, 방법, 결과, 논의·결론별 편집 기준 적용
+- AI 탐지 우회가 아닌 학술적 명료성과 연구 충실성 중심
+
+## 설치
+
+저장소의 `academic-humanize-korean` 폴더 자체가 스킬입니다. 이 저장소를 사용자 스킬 경로 아래에 클론합니다.
+
+### Windows PowerShell
+
+```powershell
+git clone https://github.com/cloudvelvet/academic-humanize-korean.git "$env:USERPROFILE\.agents\skills\academic-humanize-korean"
+```
+
+설치 후 Codex가 스킬을 찾지 못하면 Codex를 다시 시작합니다.
+
+## 사용
+
+Codex 프롬프트에서 스킬 이름을 명시하고 원고 또는 파일을 전달합니다.
+
+```text
+$academic-humanize-korean
+
+아래 논문의 논의 절을 학술 문체로 윤문해줘.
+인용, 수치, 전문용어와 주장의 확신 수준은 유지해줘.
+
+[논문 내용]
+```
+
+파일을 사용할 때는 원본 보존 여부와 편집할 절을 함께 지정하는 편이 안전합니다.
+
+```text
+$academic-humanize-korean
+
+C:\논문\paper.md의 결과 절만 윤문해줘.
+원본을 덮어쓰지 말고 별도 파일로 저장해줘.
+```
+
+## 범위
+
+이 스킬은 기존 원고의 표현을 편집합니다. 연구 결과·논증·문헌을 새로 만들거나, 표절을 숨기거나, AI 탐지기를 우회하는 용도로 설계되지 않았습니다. 연구윤리와 AI 사용 공개 기준은 소속 기관 및 투고처 지침을 확인해야 합니다.
+
+## 구성
+
+- `SKILL.md` — 스킬 진입점과 핵심 편집 원칙
+- `references/academic-editing-rules.md` — 학술 절별 세부 규칙과 최종 충실성 점검
+- `agents/openai.yaml` — Codex UI 표시 및 호출 메타데이터
+
+## 출처와 라이선스
+
+이 스킬은 [Humanize KR](https://github.com/epoko77-ai/im-not-ai)의 의미 보존 원칙을 학술 원고에 맞게 변형했습니다. 원 프로젝트의 MIT 라이선스 고지는 `LICENSE`와 `NOTICE`에 포함되어 있습니다.

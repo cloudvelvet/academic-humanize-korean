@@ -1,0 +1,7 @@
+This skill is an academic-writing adaptation inspired by Humanize KR:
+https://github.com/epoko77-ai/im-not-ai
+
+The original project is licensed under the MIT License. This adaptation keeps
+the original fidelity-first idea but replaces detector-oriented and general
+prose rules with safeguards for citations, quantitative results, disciplinary
+terminology, epistemic modality, causal claims, and manuscript section roles.
